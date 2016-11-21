@@ -7,88 +7,86 @@ import android.widget.ArrayAdapter;
 
 import fr.ganfra.materialspinner.MaterialSpinner;
 
-
 public class MainActivity extends ActionBarActivity {
 
-    private static final String ERROR_MSG = "Very very very long error message to get scrolling or multiline animation when the error button is clicked";
-    private static final String[] ITEMS = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"};
+  private static final String ERROR_MSG =
+      "Very very very long error message to get scrolling or multiline animation when the error button is clicked";
+  private static final String[] ITEMS = {
+      "Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1",
+      "Item 2 Item 2 Item 2 Item 2 Item 2 Item 2 Item 2 Item 2",
+      "Item 3 Item 3 Item 3 Item 3 Item 3 Item 3 Item 3 Item 3",
+      "Item 4 Item 4 Item 4 Item 4 Item 4 Item 4 Item 4 Item 4",
+      "Item 5 Item 5 Item 5 Item 5 Item 5 Item 5 Item 5 Item 5",
+      "Item 6 Item 6 Item 6 Item 6 Item 6 Item 6 Item 6 Item 6"
+  };
 
-    private ArrayAdapter<String> adapter;
+  private ArrayAdapter<String> adapter;
 
-    MaterialSpinner spinner1;
-    MaterialSpinner spinner2;
-    MaterialSpinner spinner3;
-    MaterialSpinner spinner4;
-    MaterialSpinner spinner5;
-    MaterialSpinner spinner6;
+  MaterialSpinner spinner1;
+  MaterialSpinner spinner2;
+  MaterialSpinner spinner3;
+  MaterialSpinner spinner4;
+  MaterialSpinner spinner5;
+  MaterialSpinner spinner6;
 
-    private boolean shown = false;
+  private boolean shown = false;
 
+  @Override protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, ITEMS);
+    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+    initSpinnerHintAndFloatingLabel();
+    initSpinnerOnlyHint();
+    initSpinnerNoHintNoFloatingLabel();
+    initSpinnerMultiline();
+    initSpinnerScrolling();
+    initSpinnerHintAndCustomHintView();
+  }
 
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, ITEMS);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+  private void initSpinnerHintAndCustomHintView() {
+    spinner6 = (MaterialSpinner) findViewById(R.id.spinner6);
+    spinner6.setAdapter(adapter);
+    spinner4.setHint("Select an item");
+  }
 
+  private void initSpinnerHintAndFloatingLabel() {
+    spinner1 = (MaterialSpinner) findViewById(R.id.spinner1);
+    spinner1.setAdapter(adapter);
+    spinner1.setPaddingSafe(0, 0, 0, 0);
+  }
 
-        initSpinnerHintAndFloatingLabel();
-        initSpinnerOnlyHint();
-        initSpinnerNoHintNoFloatingLabel();
-        initSpinnerMultiline();
-        initSpinnerScrolling();
-        initSpinnerHintAndCustomHintView();
+  private void initSpinnerOnlyHint() {
+    spinner2 = (MaterialSpinner) findViewById(R.id.spinner2);
+  }
 
+  private void initSpinnerNoHintNoFloatingLabel() {
+    spinner3 = (MaterialSpinner) findViewById(R.id.spinner3);
+    spinner3.setAdapter(adapter);
+  }
+
+  private void initSpinnerMultiline() {
+    spinner4 = (MaterialSpinner) findViewById(R.id.spinner4);
+    spinner4.setAdapter(adapter);
+    spinner4.setHint("Select an item");
+  }
+
+  private void initSpinnerScrolling() {
+    spinner5 = (MaterialSpinner) findViewById(R.id.spinner5);
+    spinner5.setAdapter(adapter);
+    spinner5.setHint("Select an item");
+  }
+
+  public void activateError(View view) {
+    if (!shown) {
+      spinner4.setError(ERROR_MSG);
+      spinner5.setError(ERROR_MSG);
+    } else {
+      spinner4.setError(null);
+      spinner5.setError(null);
     }
-
-    private void initSpinnerHintAndCustomHintView() {
-        spinner6 = (MaterialSpinner) findViewById(R.id.spinner6);
-        spinner6.setAdapter(adapter);
-        spinner4.setHint("Select an item");
-    }
-
-    private void initSpinnerHintAndFloatingLabel() {
-        spinner1 = (MaterialSpinner) findViewById(R.id.spinner1);
-        spinner1.setAdapter(adapter);
-        spinner1.setPaddingSafe(0, 0, 0, 0);
-    }
-
-    private void initSpinnerOnlyHint() {
-        spinner2 = (MaterialSpinner) findViewById(R.id.spinner2);
-    }
-
-    private void initSpinnerNoHintNoFloatingLabel() {
-        spinner3 = (MaterialSpinner) findViewById(R.id.spinner3);
-        spinner3.setAdapter(adapter);
-    }
-
-    private void initSpinnerMultiline() {
-        spinner4 = (MaterialSpinner) findViewById(R.id.spinner4);
-        spinner4.setAdapter(adapter);
-        spinner4.setHint("Select an item");
-    }
-
-    private void initSpinnerScrolling() {
-        spinner5 = (MaterialSpinner) findViewById(R.id.spinner5);
-        spinner5.setAdapter(adapter);
-        spinner5.setHint("Select an item");
-    }
-
-
-    public void activateError(View view) {
-        if (!shown) {
-            spinner4.setError(ERROR_MSG);
-            spinner5.setError(ERROR_MSG);
-        } else {
-            spinner4.setError(null);
-            spinner5.setError(null);
-        }
-        shown = !shown;
-
-    }
-
-
+    shown = !shown;
+  }
 }

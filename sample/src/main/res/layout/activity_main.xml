@@ -48,6 +48,8 @@
 
         <fr.ganfra.materialspinner.MaterialSpinner
             android:id="@+id/spinner5"
+            app:ms_floatingLabelPadding="0dp"
+            app:ms_alignLabels="false"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 

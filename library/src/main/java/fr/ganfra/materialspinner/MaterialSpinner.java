@@ -539,8 +539,6 @@ public class MaterialSpinner extends AppCompatSpinner
         } else if (floatingLabelText != null) {
           if (!floatingLabelVisible) {
             showFloatingLabel();
-          } else {
-            hideFloatingLabel();
           }
         }
 

@@ -530,10 +530,16 @@ public class MaterialSpinner extends AppCompatSpinner
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        if (hint != null || floatingLabelText != null) {
+        if (hint != null) {
           if (!floatingLabelVisible && position != 0) {
             showFloatingLabel();
           } else if (floatingLabelVisible && position == 0) {
+            hideFloatingLabel();
+          }
+        } else if (floatingLabelText != null) {
+          if (!floatingLabelVisible) {
+            showFloatingLabel();
+          } else {
             hideFloatingLabel();
           }
         }

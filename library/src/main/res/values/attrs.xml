@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="MaterialSpinner">
-        <attr name="mspinner_baseColor" format="integer"/>
-        <attr name="mspinner_highlightColor" format="integer"/>
-        <attr name="mspinner_errorColor" format="integer"/>
-        <attr name="mspinner_error" format="string"/>
-        <attr name="mspinner_hint" format="string"/>
-        <attr name="mspinner_hintColor" format="color"/>
-        <attr name="mspinner_floatingLabelText" format="string"/>
-        <attr name="mspinner_floatingLabelColor" format="color"/>
-        <attr name="mspinner_underlinePadding" format="dimension"/>
-        <attr name="mspinner_multiline" format="boolean"/>
-        <attr name="mspinner_nbErrorLines" format="integer"/>
-        <attr name="mspinner_typeface" format="string"/>
-        <attr name="mspinner_alignLabels" format="boolean"/>
-        <attr name="mspinner_thickness" format="dimension"/>
-        <attr name="mspinner_thickness_error" format="dimension"/>
-        <attr name="mspinner_arrowSize" format="dimension"/>
-        <attr name="mspinner_arrowColor" format="color"/>
-        <attr name="mspinner_enableFloatingLabel" format="boolean"/>
-        <attr name="mspinner_enableErrorLabel" format="boolean"/>
-        <attr name="mspinner_isRtl" format="boolean"/>
-        <attr name="mspinner_hintView" format="reference"/>
-        <attr name="mspinner_dropDownHintView" format="reference"/>
+        <attr name="msp_baseColor" format="integer"/>
+        <attr name="msp_highlightColor" format="integer"/>
+        <attr name="msp_errorColor" format="integer"/>
+        <attr name="msp_error" format="string"/>
+        <attr name="msp_hint" format="string"/>
+        <attr name="msp_hintColor" format="color"/>
+        <attr name="msp_floatingLabelText" format="string"/>
+        <attr name="msp_floatingLabelColor" format="color"/>
+        <attr name="msp_underlinePadding" format="dimension"/>
+        <attr name="msp_multiline" format="boolean"/>
+        <attr name="msp_nbErrorLines" format="integer"/>
+        <attr name="msp_typeface" format="string"/>
+        <attr name="msp_alignLabels" format="boolean"/>
+        <attr name="msp_thickness" format="dimension"/>
+        <attr name="msp_thickness_error" format="dimension"/>
+        <attr name="msp_arrowSize" format="dimension"/>
+        <attr name="msp_arrowColor" format="color"/>
+        <attr name="msp_enableFloatingLabel" format="boolean"/>
+        <attr name="msp_enableErrorLabel" format="boolean"/>
+        <attr name="msp_isRtl" format="boolean"/>
+        <attr name="msp_hintView" format="reference"/>
+        <attr name="msp_dropDownHintView" format="reference"/>
 
     </declare-styleable>
 </resources>

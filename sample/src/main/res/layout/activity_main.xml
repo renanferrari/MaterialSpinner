@@ -16,36 +16,36 @@
         android:id="@+id/spinner1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        app:mspinner_arrowColor="#0000FF"
-        app:mspinner_arrowSize="16dp"
-        app:mspinner_floatingLabelColor="#00FF00"
-        app:mspinner_floatingLabelText="floating label"
-        app:mspinner_hint="hint"
-        app:mspinner_multiline="true"/>
+        app:msp_arrowColor="#0000FF"
+        app:msp_arrowSize="16dp"
+        app:msp_floatingLabelColor="#00FF00"
+        app:msp_floatingLabelText="floating label"
+        app:msp_hint="hint"
+        app:msp_multiline="true"/>
 
     <fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/spinner2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        app:mspinner_enableErrorLabel="false"
-        app:mspinner_enableFloatingLabel="false"
-        app:mspinner_hint="hint"
-        app:mspinner_hintColor="#0000FF"/>
+        app:msp_enableErrorLabel="false"
+        app:msp_enableFloatingLabel="false"
+        app:msp_hint="hint"
+        app:msp_hintColor="#0000FF"/>
 
     <fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/spinner3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        app:mspinner_enableErrorLabel="false"
-        app:mspinner_enableFloatingLabel="false"/>
+        app:msp_enableErrorLabel="false"
+        app:msp_enableFloatingLabel="false"/>
 
     <fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/spinner4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        app:mspinner_alignLabels="false"
-        app:mspinner_baseColor="@color/spinner_base_color"
-        app:mspinner_multiline="false"/>
+        app:msp_alignLabels="false"
+        app:msp_baseColor="@color/spinner_base_color"
+        app:msp_multiline="false"/>
 
     <fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/spinner5"
@@ -53,19 +53,19 @@
         android:layout_height="wrap_content"
         android:paddingLeft="4dp"
         android:paddingStart="4dp"
-        app:mspinner_alignLabels="false"
+        app:msp_alignLabels="false"
         tools:ignore="RtlSymmetry"/>
 
     <fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/spinner6"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        app:mspinner_dropDownHintView="@layout/dropdown_hint_item"
-        app:mspinner_enableErrorLabel="false"
-        app:mspinner_enableFloatingLabel="false"
-        app:mspinner_hint="hint"
-        app:mspinner_hintColor="#0000FF"
-        app:mspinner_hintView="@layout/hint_item"/>
+        app:msp_dropDownHintView="@layout/dropdown_hint_item"
+        app:msp_enableErrorLabel="false"
+        app:msp_enableFloatingLabel="false"
+        app:msp_hint="hint"
+        app:msp_hintColor="#0000FF"
+        app:msp_hintView="@layout/hint_item"/>
 
     <Button
         android:layout_width="fill_parent"
